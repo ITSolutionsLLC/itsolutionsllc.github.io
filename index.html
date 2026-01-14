@@ -1,14 +1,144 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IT Solutions LLC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IT Solutions LLC | Innovative Technology for Tomorrow</title>
+  <meta name="description" content="Expert IT solutions, cybersecurity, cloud services and digital transformation in Washington DC and beyond."/>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      color: #e0e0ff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 1rem 5%;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+      border: 2px solid rgba(0, 240, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+    
+    .logo-img:hover {
+      transform: scale(1.1);
+    }
+    
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00f0ff;
+      text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    }
+    
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 5%;
+      background: 
+        linear-gradient(rgba(15, 12, 41, 0.85), rgba(48, 43, 99, 0.75)),
+        url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+    
+    .hero-content {
+      max-width: 900px;
+    }
+    
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+      color: #a0a0ff;
+      margin-bottom: 2.5rem;
+    }
+    
+    .cta-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(45deg, #00d4ff, #7c00ff);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+    }
+    
+    @media (max-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      .subtitle { font-size: 1.3rem; }
+      .logo-img { width: 40px; height: 40px; }
+      .logo-text { font-size: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>¡Bienvenidos a IT Solutions LLC! 🚀</h1>
-  <p>Somos expertos en soluciones tecnológicas en Washington DC.</p>
-  <p>Visita nuestro sitio: <a href="http://www.theitsolutions.net">www.theitsolutions.net</a></p>
-  <p>Próximamente más info aquí...</p>
-</body>
-</html>
+
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="https://avatars.githubusercontent.com/u/111079352?v=4" alt="IT Solutions LLC Logo" class="logo-img">
+        <span class="logo-text">IT Solutions LLC</span>
+      </div>
+      <!-- Puedes agregar menú aquí más adelante: About, Services, Contact -->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <!-- Opcional: versión más grande del logo en el hero si quieres más impacto -->
+      <!-- <img src="https://avatars.githubusercontent.com/u/111079352?v=4" alt="IT Solutions LLC Logo" style="width:150px; height:150px; border-radius:50%; margin-bottom:2rem; box-shadow:0 0 30px rgba(0,240,255,0.7);"> -->
+      
+      <h1>Powering the Future of Business</h1>
+      <p class="subtitle">Cutting-edge IT solutions
