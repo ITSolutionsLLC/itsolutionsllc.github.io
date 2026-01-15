@@ -1,198 +1,651 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Block Puzzle - Legal Documents</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 600px;
-            background: white;
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 80px;
-            margin-bottom: 20px;
-        }
-        
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .app-name {
-            color: #4FC3F7;
-        }
-        
-        .subtitle {
-            color: #764ba2;
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-        
-        .description {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-        
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-        
-        .btn {
-            display: block;
-            padding: 18px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(0);
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
-            color: #333;
-        }
-        
-        .info-box {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 30px;
-            text-align: left;
-        }
-        
-        .info-box h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-        
-        .info-box ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .info-box li {
-            padding: 8px 0;
-            color: #666;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .info-box li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #f0f0f0;
-            color: #666;
-        }
-        
-        .footer a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 25px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .logo {
-                font-size: 60px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1e3c72">
+    <meta name="description" content="Sports Block Puzzle - A fun family-friendly block puzzle game with sports themes">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- iOS Specific -->
+    <meta name="apple-mobile-web-app-title" content="Block Puzzle">
+    <link rel="apple-touch-icon" href="Icons/icon-192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Icons/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Icons/icon-192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="Icons/icon-192.png">
+    
+    <!-- Standard Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="Icons/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="Icons/icon-512.png">
+    
+    <title>Sports Block Puzzle - Family Edition</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
 </head>
 <body>
-    <div class="container">
-        <div class="logo">🎮</div>
-        <h1><span class="app-name">SPORTS</span> BLOCK</h1>
-        <div class="subtitle">Family Edition ⭐</div>
-        
-        <p class="description">
-            Welcome to Sports Block Puzzle! Before you start playing, please review our legal documents 
-            to understand how we protect your privacy and the terms of using our app.
-        </p>
-        
-        <div class="buttons">
-            <a href="legal/privacy-policy.html" class="btn">📄 Privacy Policy</a>
-            <a href="legal/terms-of-service.html" class="btn btn-secondary">📋 Terms of Service</a>
-        </div>
-        
-        <div class="info-box">
-            <h3>What You Should Know:</h3>
-            <ul>
-                <li>We don't collect any personal information</li>
-                <li>All game data is stored locally on your device</li>
-                <li>No user accounts or registrations required</li>
-                <li>Your privacy is our top priority</li>
-                <li>Free to play with optional in-app purchases</li>
-            </ul>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2026 IT Solutions LLC. All rights reserved.</p>
-            <p>
-                <a href="https://github.com/ITSolutionsLLC/Sports-Block-Puzzle" target="_blank">GitHub</a> |
-                <a href="mailto:support@itsolutionsllc.com">Contact</a>
-            </p>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-content">
+            <div class="logo-container">
+                <img src="Images/ITS.png" alt="IT Solutions" class="logo-image">
+            </div>
+            <h1 class="splash-title">IT Solutions</h1>
+            <p class="splash-subtitle">Sports Block Puzzle</p>
+            <div class="splash-loader">
+                <div class="loader-ball">⚽</div>
+                <div class="loader-ball">🏀</div>
+                <div class="loader-ball">🏐</div>
+            </div>
         </div>
     </div>
+    
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="game-container">
+        <!-- Main Menu -->
+        <div class="main-menu" id="mainMenu">
+            <!-- Main Menu Header -->
+            <header class="main-menu-header">
+                <div class="app-title">🏀 Sports Block Puzzle</div>
+                <div class="app-subtitle">Family Edition</div>
+            </header>
+            
+            <!-- Main Menu Body -->
+            <div class="main-menu-body">
+                <div class="menu-title">🏆 Choose Your Mode</div>
+                <div class="menu-cards">
+                    <div class="menu-card" id="menuClassic" data-mode="classic">
+                        <div class="card-icon">🎮</div>
+                        <div class="card-title">Classic</div>
+                        <div class="card-desc">No time limit</div>
+                    </div>
+                    <div class="menu-card" id="menuChallenge" data-mode="challenge">
+                        <div class="card-icon">⏱️</div>
+                        <div class="card-title">Challenge</div>
+                        <div class="card-desc">2 minutes countdown</div>
+                    </div>
+                    <div class="menu-card" id="menuJourney" data-mode="journey">
+                        <div class="card-icon">🗺️</div>
+                        <div class="card-title">Journey</div>
+                        <div class="card-desc">6 levels with objectives</div>
+                    </div>
+                </div>
+                <div class="menu-actions">
+                    <button class="btn-leaderboard" id="viewLeaderboardBtn">
+                        🏆 View Leaderboard
+                    </button>
+                    <button class="btn-stats" id="viewStatsBtn">
+                        📊 Statistics
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Main Menu Footer -->
+            <footer class="main-menu-footer">
+                <p class="copyright-text">© 2026 IT Solutions</p>
+                <p class="app-name-footer">"Sports Block Puzzle - Family Edition"</p>
+                <p class="rights-text">All Rights Reserved</p>
+            </footer>
+        </div>
+
+        <!-- Header -->
+        <header class="game-header hidden" id="gameHeader">
+            <div class="header-top-row">
+                <div class="score-card">
+                    <div class="score-icon">🎯</div>
+                    <div class="score-info">
+                        <div class="score-label">SCORE</div>
+                        <div class="score-value" id="score">0</div>
+                    </div>
+                </div>
+                
+                <div class="header-center">
+                    <h1 class="game-title">
+                        <span class="title-sports">SPORTS</span>
+                        <span class="title-block">BLOCK</span>
+                    </h1>
+                    <div class="game-subtitle">Family Edition ⭐</div>
+                    <div class="combo-display" id="comboDisplay" style="display: none;">0x COMBO!</div>
+                    <div class="timer-display hidden" id="timerDisplay">2:00</div>
+                </div>
+                
+                <div class="score-card best-card">
+                    <div class="score-icon">🏆</div>
+                    <div class="score-info">
+                        <div class="score-label">BEST</div>
+                        <div class="score-value" id="bestScore">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-bottom-row">
+                <button class="header-icon-btn theme-btn" id="themeToggleBtn" title="Change Theme">
+                    <span class="btn-icon">⚽</span>
+                </button>
+                <button class="header-icon-btn settings-btn" id="settingsBtn" title="Settings">
+                    <span class="btn-icon">⚙️</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Journey Levels Screen -->
+        <div class="journey-levels hidden" id="journeyLevels">
+            <!-- Journey Header -->
+            <header class="journey-top-header">
+                <div class="score-container">
+                    <div class="label">Completed</div>
+                    <div class="score" id="journeyCompleted">0/6</div>
+                </div>
+                <div class="center-info">
+                    <h1 class="game-title">Journey Mode</h1>
+                    <div class="journey-sport-name" id="journeySportName">All Sports</div>
+                </div>
+                <div class="best-score-container">
+                    <div class="label">Stars</div>
+                    <div class="best-score" id="journeyStars">0</div>
+                </div>
+            </header>
+            
+            <div class="journey-navigation">
+                <button class="btn-back-arrow" id="backToMenuBtn">←</button>
+                <h2 class="journey-map-title">Select Level</h2>
+                <button class="btn-change-sport" id="changeSportBtn" title="Change Sport">🎨</button>
+            </div>
+            
+            <div class="journey-map-container">
+                <div class="journey-path">
+                    <!-- Level 6 - Champion -->
+                    <div class="journey-level-item" data-level="6">
+                        <div class="level-number">6</div>
+                        <div class="level-card champion-card">
+                            <div class="level-name" id="levelName6">Champion</div>
+                            <div class="level-image football-image">🏈</div>
+                            <div class="level-lock" id="lock6">🔒</div>
+                            <div class="level-stars" id="stars6"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connector -->
+                    <div class="path-connector"></div>
+                    
+                    <!-- Level 5 - Expert -->
+                    <div class="journey-level-item" data-level="5">
+                        <div class="level-number">5</div>
+                        <div class="level-card expert-card">
+                            <div class="level-name" id="levelName5">Expert</div>
+                            <div class="level-image baseball-image">⚾</div>
+                            <div class="level-lock" id="lock5">🔒</div>
+                            <div class="level-stars" id="stars5"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connector -->
+                    <div class="path-connector"></div>
+                    
+                    <!-- Level 4 - Professional -->
+                    <div class="journey-level-item" data-level="4">
+                        <div class="level-number">4</div>
+                        <div class="level-card professional-card">
+                            <div class="level-name" id="levelName4">Professional</div>
+                            <div class="level-image tennis-image">🎾</div>
+                            <div class="level-lock" id="lock4">🔒</div>
+                            <div class="level-stars" id="stars4"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connector -->
+                    <div class="path-connector"></div>
+                    
+                    <!-- Level 3 - Competitor -->
+                    <div class="journey-level-item" data-level="3">
+                        <div class="level-number">3</div>
+                        <div class="level-card competitor-card">
+                            <div class="level-name" id="levelName3">Competitor</div>
+                            <div class="level-image volleyball-image">🏐</div>
+                            <div class="level-lock" id="lock3">🔒</div>
+                            <div class="level-stars" id="stars3"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connector -->
+                    <div class="path-connector"></div>
+                    
+                    <!-- Level 2 - Amateur -->
+                    <div class="journey-level-item" data-level="2">
+                        <div class="level-number">2</div>
+                        <div class="level-card amateur-card">                            <div class="level-name" id="levelName2">Intermediate</div>                            <div class="level-image basketball-image">🏀</div>
+                            <div class="level-lock" id="lock2">🔒</div>
+                            <div class="level-stars" id="stars2"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Connector -->
+                    <div class="path-connector"></div>
+                    
+                    <!-- Level 1 - Beginner -->
+                    <div class="journey-level-item" data-level="1">
+                        <div class="level-number">1</div>
+                        <div class="level-card beginner-card">                            <div class="level-name" id="levelName1">Beginner</div>                            <div class="level-image soccer-image">⚽</div>
+                            <div class="level-lock" id="lock1" style="display: none;"></div>
+                            <div class="level-stars" id="stars1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Journey Footer -->
+            <div class="journey-footer">
+                <div class="footer-trophy-container">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-glow"></div>
+                </div>
+                <div class="achievement-info">
+                    <div class="achievement-label">CURRENT ACHIEVEMENT</div>
+                    <div class="achievement-level" id="currentLevelAchieved">Level 1 - Local League 🏴</div>
+                </div>
+                <div class="footer-sport-icon" id="footerSportIcon">⚽</div>
+            </div>
+            
+            <button class="btn-start-level hidden" id="startSelectedLevel">
+                <span class="btn-play-icon">▶</span>
+                <span class="btn-play-text">Level 1</span>
+            </button>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions hidden" id="instructions">
+            👆 <strong>1.</strong> Tap a piece below ➜ <strong>2.</strong> Tap the board to place it
+        </div>
+
+        <!-- Journey Level Info -->
+        <div class="level-info hidden" id="levelInfo">
+            <div class="level-header">
+                <button class="btn-small btn-back-game" id="backToLevelsBtn">← Levels</button>
+                <div class="level-title" id="levelTitle">Level 1</div>
+                <div class="level-stars" id="levelStars">☆☆☆</div>
+            </div>
+            <div class="level-objective" id="levelObjective">Objective: 500 points</div>
+        </div>
+
+        <!-- Tablero principal -->
+        <div class="board-container hidden">
+            <div id="gameBoard" class="game-board"></div>
+        </div>
+
+        <!-- Piezas disponibles -->
+        <div class="pieces-container hidden">
+            <div class="piece-slot" id="piece1"></div>
+            <div class="piece-slot" id="piece2"></div>
+            <div class="piece-slot" id="piece3"></div>
+        </div>
+
+        <!-- Rotate Button -->
+        <div class="rotate-button-container hidden" id="rotateButtonContainer">
+            <button class="btn btn-rotate" id="rotateBtn">🔄 Rotate Piece</button>
+        </div>
+
+        <!-- Power-ups Bar -->
+        <div class="powerups-container hidden" id="powerupsContainer">
+            <div class="powerup-item" id="powerupReroll" data-cost="300">
+                <div class="powerup-icon">🔄</div>
+                <div class="powerup-name">Reroll</div>
+                <div class="powerup-cost">300</div>
+            </div>
+            <div class="powerup-item" id="powerupTrash" data-cost="200">
+                <div class="powerup-icon">🗑️</div>
+                <div class="powerup-name">Trash</div>
+                <div class="powerup-cost">200</div>
+            </div>
+            <div class="powerup-item" id="powerupBomb" data-cost="500">
+                <div class="powerup-icon">💣</div>
+                <div class="powerup-name">Bomb</div>
+                <div class="powerup-cost">500</div>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls hidden">
+            <button class="btn btn-theme" id="themeBtn">🎨 Theme</button>
+            <button class="btn btn-restart" id="restartBtn">🔄 Restart</button>
+            <button class="btn btn-sound" id="soundBtn">🔊 Sound</button>
+        </div>
+        </div>
+
+    <!-- Welcome Screen Modal -->
+    <div id="welcomeModal" class="modal hidden">
+        <div class="modal-content welcome-screen">
+            <h1 class="welcome-title">
+                <span class="color-text">SPORTS</span>
+                <span class="white-text">BLOCK</span>
+            </h1>
+            <p class="welcome-subtitle">Family Edition ⭐</p>
+            
+            <div class="welcome-stats">
+                <div class="stat-item">
+                    <span class="stat-icon">🏆</span>
+                    <span class="stat-label" style="color: #ffffff !important; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;">Score</span>
+                    <span class="stat-value" id="welcomeScore" style="color: #ffffff !important; font-size: 2.5rem !important; font-weight: 900 !important; text-shadow: 3px 3px 8px rgba(0,0,0,0.9) !important; -webkit-text-stroke: 1px rgba(0,0,0,0.3);">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">📅</span>
+                    <span class="stat-label" style="color: #ffffff !important; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;">Streak</span>
+                    <span class="stat-value" id="welcomeStreak" style="color: #ffffff !important; font-size: 2.5rem !important; font-weight: 900 !important; text-shadow: 3px 3px 8px rgba(0,0,0,0.9) !important; -webkit-text-stroke: 1px rgba(0,0,0,0.3);">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">📍</span>
+                    <span class="stat-label" style="color: #ffffff !important; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important;">Levels</span>
+                    <span class="stat-value" id="welcomeLevels" style="color: #ffffff !important; font-size: 2.5rem !important; font-weight: 900 !important; text-shadow: 3px 3px 8px rgba(0,0,0,0.9) !important; -webkit-text-stroke: 1px rgba(0,0,0,0.3);">1-1</span>
+                </div>
+            </div>
+
+            <div class="welcome-buttons">
+                <button class="btn-welcome btn-tutorial" id="welcomeTutorialBtn">
+                    <span class="btn-icon">🎓</span>
+                    <span class="btn-text">Tutorial</span>
+                </button>
+                <button class="btn-welcome btn-journey" id="welcomeJourneyBtn">
+                    <span class="btn-icon">📍</span>
+                    <span class="btn-text">Journey</span>
+                </button>
+                <button class="btn-welcome btn-classic" id="welcomeClassicBtn">
+                    <span class="btn-icon">💎</span>
+                    <span class="btn-text">Classic</span>
+                </button>
+                <button class="btn-welcome btn-challenge" id="welcomeChallengeBtn">
+                    <span class="btn-icon">⏱️</span>
+                    <span class="btn-text">Challenge</span>
+                </button>
+            </div>
+
+            <div class="welcome-footer">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="dontShowWelcome">
+                    <span class="checkbox-label">Don't show this again</span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎮 Game Over</h2>
+            <p class="game-over-reason" id="gameOverReason">No more moves!</p>
+            <p class="final-score">Score: <span id="finalScore">0</span></p>
+            <p class="best-score-modal">Best Score: <span id="bestScoreModal">0</span></p>
+            <button class="btn btn-play-again" id="playAgainBtn">Play Again</button>
+            <p class="modal-footer-text">© 2026 IT Solutions - Sports Block Puzzle</p>
+        </div>
+    </div>
+
+    <!-- Theme Selector Modal -->
+    <div id="themeModal" class="modal hidden">
+        <div class="modal-content theme-selector">
+            <h2>🎨 Choose Your Favorite Sport</h2>
+            <div class="theme-grid">
+                <div class="theme-card" data-theme="mixed">
+                    <div class="theme-emoji">⭐</div>
+                    <div class="theme-name">All Sports</div>
+                </div>
+                <div class="theme-card" data-theme="soccer">
+                    <div class="theme-emoji">⚽</div>
+                    <div class="theme-name">Soccer</div>
+                </div>
+                <div class="theme-card" data-theme="basketball">
+                    <div class="theme-emoji">🏀</div>
+                    <div class="theme-name">Basketball</div>
+                </div>
+                <div class="theme-card" data-theme="volleyball">
+                    <div class="theme-emoji">🏐</div>
+                    <div class="theme-name">Volleyball</div>
+                </div>
+                <div class="theme-card" data-theme="tennis">
+                    <div class="theme-emoji">🎾</div>
+                    <div class="theme-name">Tennis</div>
+                </div>
+                <div class="theme-card" data-theme="baseball">
+                    <div class="theme-emoji">⚾</div>
+                    <div class="theme-name">Baseball</div>
+                </div>
+                <div class="theme-card" data-theme="football">
+                    <div class="theme-emoji">🏈</div>
+                    <div class="theme-name">Football</div>
+                </div>
+            </div>
+            <button class="btn btn-close-theme" id="closeThemeBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content settings-panel">
+            <h2>⚙️ Settings</h2>
+            <div class="settings-group">
+                <div class="setting-item">
+                    <label>🔊 Sound</label>
+                    <button class="toggle-btn" id="soundToggle">ON</button>
+                </div>
+                <div class="setting-item">
+                    <label>📳 Vibration</label>
+                    <button class="toggle-btn" id="vibrationToggle">ON</button>
+                </div>
+                <div class="setting-item">
+                    <label>🗣️ Voice</label>
+                    <button class="toggle-btn" id="voiceToggle">ON</button>
+                </div>
+            </div>
+            <div class="settings-group">
+                <button class="btn btn-theme-settings" id="themeFromSettings">🎨 Change Theme</button>
+                <button class="btn btn-tutorial-restart" id="restartTutorialBtn">🎓 View Tutorial Again</button>
+                <button class="btn btn-reset" id="resetProgressBtn">🔄 Reset Progress</button>
+                <button class="btn btn-welcome-reset" id="showWelcomeAgainBtn">👋 Show Welcome Screen</button>
+            </div>
+            <div class="settings-group legal-links">
+                <a href="legal/privacy-policy.html" target="_blank" class="btn btn-legal">📄 Privacy Policy</a>
+                <a href="legal/terms-of-service.html" target="_blank" class="btn btn-legal">📋 Terms of Service</a>
+            </div>
+            <button class="btn btn-close" id="closeSettingsBtn">Close</button>
+        </div>
+    </div>
+
+    <!-- Victory Modal Journey -->
+    <div id="victoryModal" class="modal hidden">
+        <div class="modal-content victory-panel">
+            <h2>🎉 Level Complete!</h2>
+            <div class="victory-stars" id="victoryStars">⭐⭐⭐</div>
+            <p class="victory-score">Score: <span id="victoryScore">0</span></p>
+            <p class="victory-objective" id="victoryObjective">Objective achieved</p>
+            <div class="victory-buttons">
+                <button class="btn btn-next-level" id="nextLevelBtn">Next Level →</button>
+                <button class="btn btn-replay" id="replayLevelBtn">🔄 Replay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaderboard Modal -->
+    <div id="leaderboardModal" class="modal hidden">
+        <div class="modal-content leaderboard-panel">
+            <!-- Leaderboard Header -->
+            <header class="modal-header">
+                <h2>🏆 Top 10 Scores</h2>
+            </header>
+            
+            <!-- Leaderboard Body -->
+            <div class="modal-body">
+                <div class="leaderboard-table" id="leaderboardTable">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Leaderboard Footer -->
+            <footer class="modal-footer">
+                <button class="btn btn-close" id="closeLeaderboardBtn">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Statistics Dashboard Modal -->
+    <div id="statsModal" class="modal hidden">
+        <div class="modal-content stats-panel">
+            <!-- Statistics Header -->
+            <header class="modal-header">
+                <h2>📊 Statistics Dashboard</h2>
+            </header>
+            
+            <!-- Statistics Body -->
+            <div class="modal-body stats-body">
+                <div class="stats-container">
+                    <div class="stats-section">
+                        <h3>🎮 General Stats</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Games Played:</span>
+                            <span class="stat-value" id="statGamesPlayed">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total Score:</span>
+                            <span class="stat-value" id="statTotalScore">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Average Score:</span>
+                            <span class="stat-value" id="statAvgScore">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total Play Time:</span>
+                            <span class="stat-value" id="statTotalTime">0h 0m</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-section">
+                        <h3>🏆 Records</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Best Score:</span>
+                            <span class="stat-value" id="statBestScore">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Most Lines Cleared:</span>
+                            <span class="stat-value" id="statMostLines">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Longest Combo:</span>
+                            <span class="stat-value" id="statLongestCombo">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Fastest Win:</span>
+                            <span class="stat-value" id="statFastestWin">--</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-section">
+                        <h3>⚡ Power-ups & Lines</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Lines Cleared:</span>
+                            <span class="stat-value" id="statLinesCleared">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">💣 Bombs Used:</span>
+                            <span class="stat-value" id="statBombsUsed">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">🔄 Rerolls Used:</span>
+                            <span class="stat-value" id="statRerollsUsed">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">🗑️ Trash Used:</span>
+                            <span class="stat-value" id="statTrashUsed">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-section">
+                        <h3>🌟 Special Achievements</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Perfect Placements:</span>
+                            <span class="stat-value" id="statPerfectPlacements">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Double Lines:</span>
+                            <span class="stat-value" id="statDoubleLines">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Perfect Crosses:</span>
+                            <span class="stat-value" id="statPerfectCrosses">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Big Clears (4+):</span>
+                            <span class="stat-value" id="statBigClears">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Statistics Footer -->
+            <footer class="modal-footer stats-footer">
+                <button class="btn btn-reset-stats" id="resetStatsBtn">🔄 Reset Stats</button>
+                <button class="btn btn-close" id="closeStatsBtn">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- New High Score Modal -->
+    <div id="highScoreModal" class="modal hidden">
+        <div class="modal-content highscore-panel">
+            <h2>🎉 NEW HIGH SCORE!</h2>
+            <p class="highscore-text">You made it to the Top 10!</p>
+            <p class="final-score-display">Score: <span id="highScoreValue">0</span></p>
+            <div class="name-input-container">
+                <label for="playerNameInput">Enter your name:</label>
+                <input type="text" id="playerNameInput" maxlength="15" placeholder="Player Name" />
+            </div>
+            <div class="highscore-buttons">
+                <button class="btn btn-submit-score" id="submitScoreBtn">Save & Continue</button>
+                <button class="btn btn-skip-score" id="skipScoreBtn">Skip</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orientation Notice (for small screens in landscape) -->
+    <div class="orientation-notice">
+        <div class="orientation-content">
+            <div class="orientation-icon">📱</div>
+            <div class="orientation-text">Please Rotate Your Device</div>
+            <div class="orientation-subtext">This game is best played in portrait mode</div>
+        </div>
+    </div>
+
+    <!-- Interactive Tutorial -->
+    <div id="tutorialOverlay" class="tutorial-overlay hidden">
+        <div class="tutorial-backdrop"></div>
+        <div class="tutorial-content">
+            <div class="tutorial-header">
+                <div class="tutorial-progress">
+                    <span class="tutorial-drag-icon">⋮⋮</span>
+                    <span class="tutorial-step-indicator">Step <span id="tutorialStep">1</span> of 6</span>
+                </div>
+                <button class="tutorial-skip" id="tutorialSkip">Skip Tutorial</button>
+            </div>
+            <div class="tutorial-body">
+                <div class="tutorial-icon" id="tutorialIcon">🎯</div>
+                <h3 class="tutorial-title" id="tutorialTitle">Welcome to Sports Block Puzzle!</h3>
+                <p class="tutorial-description" id="tutorialDescription">
+                    Let's learn how to play in just a few steps.
+                </p>
+            </div>
+            <div class="tutorial-footer">
+                <button class="btn tutorial-btn-back hidden" id="tutorialBack">← Back</button>
+                <button class="btn tutorial-btn-next" id="tutorialNext">Next →</button>
+            </div>
+        </div>
+        <div class="tutorial-highlight" id="tutorialHighlight"></div>
+        <div class="tutorial-pointer" id="tutorialPointer"></div>
+    </div>
+
+    </div>
+    <script src="game.js"></script>
 </body>
 </html>
+
